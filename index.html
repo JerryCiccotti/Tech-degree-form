@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Code Review - Newsletter Signup</title>
-    <link rel="stylesheet" href="css/style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -13,43 +15,45 @@
         </div>
         
         <div class="form-container">
-            <h1 class="form-title">Signup for our newsletter</h1>
-            <p class="form-subtitle">Get the latest news on how your code is doing right in your inbox</p>
+            <h1 class="title">Signup for our newsletter</h1>
+            <p class="subtitle">Get the latest news on how your code is doing right in your inbox</p>
             
             <div class="divider"></div>
             
             <form>
-                <fieldset>
-                    <legend>Contact Information</legend>
-                    
-                    <div class="form-group">
-                        <label for="fullName">Full Name <span class="required">Required</span></label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="required">Required</span></label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="street">Street Address</label>
-                        <input type="text" id="street" name="street" placeholder="123 Main Street">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" id="city" name="city" placeholder="Enter your city">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="state">State</label>
-                        <select id="state" name="state">
+                <h2 class="section-title">Contact Information</h2>
+                
+                <div class="form-group">
+                    <label class="form-label" for="fullName">Full Name</label>
+                    <input type="text" id="fullName" class="form-input" placeholder="Enter your full name" required>
+                    <span class="required-text">Required</span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                    <span class="required-text">Required</span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="(555) 123-4567">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="street">Street Address</label>
+                    <input type="text" id="street" class="form-input" placeholder="123 Main Street">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="city">City</label>
+                    <input type="text" id="city" class="form-input" placeholder="City name">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="state">State</label>
+                    <div class="select-wrapper">
+                        <select id="state" class="form-select">
                             <option value="">Choose State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -63,66 +67,58 @@
                             <option value="GA">Georgia</option>
                             <!-- Add more states as needed -->
                         </select>
+                        <span class="select-arrow">▼</span>
                     </div>
-                    
-                    <div class="form-group zip-code">
-                        <label for="zipCode">Zip Code</label>
-                        <input type="text" id="zipCode" name="zipCode" placeholder="12345" maxlength="10">
-                    </div>
-                </fieldset>
+                </div>
                 
-                <div class="divider"></div>
+                <div class="form-group">
+                    <label class="form-label" for="zip">Zip Code</label>
+                    <input type="text" id="zip" class="form-input" placeholder="12345" style="width: 150px;">
+                </div>
                 
-                <fieldset class="newsletter-section">
-                    <legend>Newsletter</legend>
-                    
-                    <div class="form-group">
-                        <label>Select the newsletters you would like to receive</label>
-                        <div class="newsletter-options">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="htmlNews" name="newsletters" value="html" checked>
-                                <label for="htmlNews">HTML News</label>
-                            </div>
-                            
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="cssNews" name="newsletters" value="css">
-                                <label for="cssNews">CSS News</label>
-                            </div>
-                            
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="jsNews" name="newsletters" value="javascript">
-                                <label for="jsNews">Javascript News</label>
-                            </div>
-                        </div>
+                <div class="section-divider"></div>
+                
+                <h2 class="section-title">Newsletter</h2>
+                
+                <p class="form-label" style="margin-bottom: 15px;">Select the newsletters you would like to receive</p>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="html" class="checkbox-input" checked>
+                        <label for="html" class="checkbox-label">HTML News</label>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Newsletter format</label>
-                        <div class="newsletter-options">
-                            <div class="radio-group">
-                                <input type="radio" id="htmlFormat" name="format" value="html" checked>
-                                <label for="htmlFormat">HTML</label>
-                            </div>
-                            
-                            <div class="radio-group">
-                                <input type="radio" id="plainFormat" name="format" value="plain">
-                                <label for="plainFormat">Plain text</label>
-                            </div>
-                        </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="css" class="checkbox-input">
+                        <label for="css" class="checkbox-label">CSS News</label>
                     </div>
-                    
-                    <div class="form-group" style="margin-top: 25px;">
-                        <label for="otherTopics">Other topics you'd like to hear about</label>
-                        <textarea id="otherTopics" name="otherTopics" placeholder="Tell us what other topics interest you..."></textarea>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="javascript" class="checkbox-input">
+                        <label for="javascript" class="checkbox-label">Javascript News</label>
                     </div>
-                </fieldset>
+                </div>
+                
+                <p class="form-label" style="margin-bottom: 15px; margin-top: 25px;">Newsletter format</p>
+                
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="format-html" name="format" class="radio-input" checked>
+                        <label for="format-html" class="radio-label">HTML</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="format-text" name="format" class="radio-input">
+                        <label for="format-text" class="radio-label">Plain text</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="topics">Other topics you'd like to hear about</label>
+                    <textarea id="topics" class="textarea" placeholder="Tell us about other programming topics or technologies you're interested in..."></textarea>
+                </div>
                 
                 <button type="submit" class="submit-btn">Sign Up</button>
-                
-                <div class="footer">
-                    Copyright The Code Review
-                </div>
             </form>
+            
+            <p class="footer">Copyright The Code Review</p>
         </div>
     </div>
 </body>
